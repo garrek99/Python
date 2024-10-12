@@ -1,6 +1,6 @@
 #pip install pytest
 import pytest
-from calculator_with_unit_tests import square
+from unit_tests_calculator import square
 
 def main():
     test_square()
