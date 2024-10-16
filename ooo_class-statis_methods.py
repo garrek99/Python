@@ -6,7 +6,11 @@ class Student:
     def __str__(self):
         return f"{self.name} is from {self.house}"
     
+    
     Houses = ["Cyprus", "USA", "Armenia", "Russia"]
+    Houses_Copy = Houses[:]
+    # SORT modifies the list while SORTED() does not
+    Houses.sort(key=str.lower)
     
     @classmethod
     def get(cls):

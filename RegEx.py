@@ -6,21 +6,17 @@ if re.search(r"^\w+(\.\w+)?@(\w+\.)*\w+\..{2,3}$", email, re.IGNORECASE):
 else:
     print("Invalid") 
 
-
 name = input("What's your name? ").strip()
 if matches := re.search(r"^(.+), ?(.+)$", name):
     name = matches.group(2) + " " + matches.group(1)
 print(f"hello, {name}")
 
-
 url = input("URL? ").strip()
 username = re.sub(r"^(https?://)?(www\.)?twitter\.com/", "", url)
 print(username)
 
-
 if matches := re.search(r"^https?://(?:www\.)?twitter\.com/([a-z0-9_])", url, re.IGNORECASE):
     print(f"Username: ", matches.groups(1))
-
 
 """_RegEx Cheatsheet_
     re.IGNORECASE

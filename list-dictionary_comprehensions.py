@@ -1,6 +1,5 @@
 from map_filter_enumerate import yell
 
-
 family = [
     {"first_name": "Caren", "last_name": "Khachatrian"},
     {"first_name": "Hripsime", "last_name": "Shirvanian"},
@@ -9,12 +8,20 @@ family = [
 ]
 
 
-# List Comprehensions
-khachatrian_family = [{"first_name": member["first_name"], "last_name": member["last_name"]} for member in family]
-print(khachatrian_family)
+# LIST Comprehensions
+khachatrians_list = [{"first_name": member["first_name"], "last_name": member["last_name"]} for member in family]
+print(khachatrians_list)
 
-# Dictionary Comprehensions
-khachatrians_dictionary = {member["first_name"]: member["last_name"]  for member in family}
+# DICTIONARY Comprehensions
+khachatrians_dictionary = {member["first_name"]: member["last_name"] for member in family}
+print(khachatrians_dictionary)
+
+# SET Comprehensions
+test_set = {member["first_name"] for member in family}
+print(test_set)
+
+# DELETE dictionary object
+del khachatrians_dictionary['Caren']
 print(khachatrians_dictionary)
 
 # Using a generator object

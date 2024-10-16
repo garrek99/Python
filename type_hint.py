@@ -5,4 +5,7 @@ number: int = input("Number: ")
 meows: str = meow(number)
 print(meows, end="")
 
+print(type(meows))
+print(isinstance(meows, str))
+
 #mypy .\type_hint.py
